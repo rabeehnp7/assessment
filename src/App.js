@@ -26,7 +26,6 @@ export default function App() {
     fetchData();
   }, []);
   const handleClick = () => {
-    console.log(sort);
     const SortedArray = [...data].sort((a, b) => {
       if (sort === "asc") {
         return a.name.localeCompare(b.name);
