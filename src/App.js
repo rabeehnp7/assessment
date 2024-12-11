@@ -73,7 +73,11 @@ export default function App() {
         }`}</button>
       </div>
       <div className="md:flex md:justify-center bg-white p-5 overflow-x-auto ">
-        <table className="md:w-10/12 w-auto overflow-hidden">
+        {
+          filteredUser <=0? (<>
+          <h1 className="font-bold">No users Found</h1>
+          </>):
+          <table className="md:w-10/12 w-auto overflow-hidden">
           <thead className="bg-gray-100">
             <tr>
               <th>ID</th>
@@ -95,6 +99,7 @@ export default function App() {
             ))}
           </tbody>
         </table>
+        }
       </div>
     </div>
   );
