@@ -43,7 +43,7 @@ export default function App() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex justify-center items-center text-xl">
-        Loading...
+        Loading....
       </div>
     );
   }
