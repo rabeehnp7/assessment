@@ -38,7 +38,7 @@ export default function App() {
   };
 
   const filteredUser = data.filter((user) => {
-    return user.address.city.toLowerCase().includes(search.toLowerCase());
+    return user.address.city.toLowerCase().replace(/\s+/g,'').includes(search.toLowerCase().replace(/\s+/g,''));
   });
   if (isLoading) {
     return (
